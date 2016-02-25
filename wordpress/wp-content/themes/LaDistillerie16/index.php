@@ -1,21 +1,6 @@
 <?php get_header(); ?>
 
 
-<div id="statement" class='M-hide fixed'>
-<div id='sttmnt-blckr' class='L-1-1'></div>
-	<?php query_posts('cat=8&showposts=1'); ?>
-	<?php while (have_posts()) : the_post(); ?>
-	<article <?php post_class('green-background inner space-after-4') ?> id="post-<?php the_ID(); ?>">
-		<h3 class='gutters-1 green-text space-before-2'>
-			<?php the_content(); ?>
-		</h3>
-		<div class='space-before-1 gutters-1 left-indent'>
-			<a href='/la-compagnie' class='subtitle-font small-text green-text'>À Propos De La Compagnie</a>
-		</div>
-	</article>
-<?php endwhile; ?>
-</div>
-
 <?php query_posts('cat=5&showposts=1'); ?>
 <?php while (have_posts()) : the_post(); ?>
 
@@ -39,39 +24,42 @@
 				</h2>
 			</header>
 		</a>
-		<div class='main-info float-container'>
-			<?php //saison
-				$saison = get_field('saison');
-				if( $saison ):
-					echo '<div class="L-1-4 gutters">' . $saison . '</div>';
-			endif; ?>
-			<?php // lieux
-			    while ( have_rows('lieux') ) : the_row();
 
-					$ville = get_sub_field('ville');
-					$dates = get_sub_field('dates');
-					$theatre = get_sub_field('theatre');
-					$link = get_sub_field('lien');
+		<div class='gutters'>
+			<section class='main-info bigtext float-container'>
+				<?php //saison
+					$saison = get_field('saison');
+					if( $saison ):
+						echo '<div class="saison L-1-4 ML-1-1">' . $saison . '</div>';
+				endif; ?>
+				<?php // lieux
+				    while ( have_rows('lieux') ) : the_row();
 
-			        if( get_row_layout() == 'lieu' ):
+						$ville = get_sub_field('ville');
+						$dates = get_sub_field('dates');
+						$theatre = get_sub_field('theatre');
+						$link = get_sub_field('lien');
 
-			        	echo '<div class="float-container L-3-4">';
-			        			echo '<div class="L-1-3 gutters">' . $ville . '</div>';
-			        			echo '<div class="L-2-3 gutters inline-block-container">';
-				        			echo '<div class="">' . $dates . '</div>';
-				        			echo '<h3 class="">&nbsp;' . $theatre . '</h3>';
-			        			if( $link ):
-					        		echo '<a href='.$link.' class="button link">Reserver</a>';
-					        	endif;
-					        	echo '</div>';
-			        	echo '</div>';
+				        if( get_row_layout() == 'lieu' ):
 
-			        endif;
-			    endwhile;
-			?>
+				        	echo '<div class="float-container lieu L-3-4 ML-1-1 float-right">';
+				        			echo '<div class="L-1-3 S-1-1">' . $ville . '</div>';
+				        			echo '<div class="L-2-3 S-1-1">';
+					        			echo '<span>' . $dates . '</span>';
+					        			echo '<span>&nbsp;' . $theatre . '</span>';
+				        			if( $link ):
+						        		echo '<a href='.$link.' class="button link">Reserver</a>';
+						        	endif;
+						        	echo '</div>';
+				        	echo '</div>';
 
-		</div>
-		<div class='L-1-1 center-aligned'>
+				        endif;
+				    endwhile;
+				?>
+				</section>
+			</div>
+
+		<div class='L-1-1 center-aligned more'>
 			<a href="<?php the_permalink() ?>" class='button'>
 				Le Spectacle
 			</a>

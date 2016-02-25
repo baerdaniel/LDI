@@ -6,7 +6,7 @@
 .lightbox{
 	position: fixed;
 	left: 0;
-	top: 60px !important;
+	/*top: 60px !important;*/
 	width: 100%;
 	z-index: 10100;/*twentyeleven keeps the header at 999...*/
 	text-align: center;
@@ -38,7 +38,9 @@
 	background-color: #fff;
 	width: 250px;
 	height: 250px;
+	bottom: 230px;
 	margin: 0 auto;
+	/*transform: translateY(-50%);*/
 	}
 
 #imageContainer{

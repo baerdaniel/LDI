@@ -32,10 +32,10 @@ Template Name: About
 
 			<div class='L-1-4 ML-1-1 float-container sidebar'>
 				<div class='fix-it L-1-1 ML-1-2 M-1-1 gutters-1 space-before-1 space-after-2'>
-					<div class='subtitle-font space-after-1'>
+					<h3 class='space-after-1'>
 						Contact
-					</div>
-					<div class='small-text'>
+					</h3>
+					<div class=''>
 						<?php the_field('contact'); ?>
 					</div>
 				</div>

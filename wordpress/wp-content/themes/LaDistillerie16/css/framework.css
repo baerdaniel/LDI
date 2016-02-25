@@ -85,12 +85,17 @@ input [type=date],
 input[type=password],
 input[type=search],
 input[type=tel] {
-  border:1px solid blue;
+  border:1px solid black;
 }
 
 input:focus {
   outline: 0px;
-  border:1px solid red;
+  border:1px solid black;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius:0;
 }
 
 /* Table */

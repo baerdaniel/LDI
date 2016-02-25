@@ -45,15 +45,33 @@
 				</a>
 			</div>
 
-			<nav id="main-nav" class='subtitle-font small-text' role="navigation">
+			<nav id="main-nav" class='subtitle-font' role="navigation">
 				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 			</nav>
 
 		</div>		
 	</div> <!-- .inner -->
+	<?php if ( is_home() ) {
+
+		echo "<div id='statement' class='M-hide fixed'>";
+			echo "<article class='green-background inner space-after-4'>";
+				echo "<h3 class='gutters-1 green-text space-before-2'>";
+					echo "Si le théâtre est à la fois lieu et expérience d’un art où la vie s’exprime, se transforme, se condense, en un mot se recrée, La Distillerie Cie a pour claire vocation d’en explorer l’alchimie, d’en extraire une identité, d’en diffuser parfums et élixirs dans le paysage culturel suisse romand et au-delà.";
+				echo "</h3>";
+				echo "<div class='space-before-1 gutters-1 left-indent'>";
+					echo "<a href='/la-compagnie' class='subtitle-font small-text green-text'>À Propos De La Compagnie</a>";
+				echo "</div>";
+			echo "</article>";
+			
+		echo "</div>";
+		}
+	?>
+
+
+
 </header>
 <!-- 	<a href="#header" class='top-link'>– – –</a>
  -->
 	<div id='main-blckr' class='L-1-1'></div>
 
-	<div id="main" class='L-1-1 space-after-4' role="main">
+	<div id="main" class='L-1-1' role="main">

@@ -16,17 +16,17 @@ Template Name: Partenaires
 				<?php the_content(); ?>
 			</div><!--#resume-->
 
- 			<div class='float-container space-before-4'> 
-				<div id="partenaires" class='L-1-3 M-1-2 S-1-1 gutters-1 space-after-4'>
+ 			<div class='float-container space-before-2'> 
+				<div id="partenaires" class='L-1-3 M-1-2 S-1-1 gutters-1 space-after-3'>
 					<h3 class='space-after-1'>Subventionneurs</h4>
 					<?php the_field('subventionneurs'); ?>
 				</div>
 	
-				<div id="collaborateurs" class='L-1-3 M-1-2 S-1-1 gutters-1 space-after-4'>
+				<div id="collaborateurs" class='L-1-3 M-1-2 S-1-1 gutters-1 space-after-3'>
 					<h3 class='space-after-1'>Collaborateurs</h4>
 					<?php the_field('collaborateurs'); ?>
 				</div>
-				<div id="theatres" class='L-1-3 M-1-2 S-1-1 gutters-1 space-after-4'>
+				<div id="theatres" class='L-1-3 M-1-2 S-1-1 gutters-1 space-after-3'>
 					<h3 class='space-after-1'>Théâtres</h4>
 					<?php the_field('collaborateurs_2'); ?>
 				</div>

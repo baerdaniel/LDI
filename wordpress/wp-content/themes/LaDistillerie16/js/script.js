@@ -47,7 +47,7 @@ $(window).scroll(function () {
   var addTop  = - sT/2;
   var gallery = '.gallery';
 
-  $(gallery).css('top', addTop + 'px');
+  $(gallery).css('bottom', addTop + 'px');
 });
 
 
